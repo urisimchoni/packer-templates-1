@@ -115,7 +115,10 @@
       "scripts/fedora/vmware.sh",
       "scripts/common/vagrant.sh",
       "scripts/common/sshd.sh",
-      "scripts/fedora/cleanup.sh",
+      "scripts/common/ansible.sh",
+      "scripts/fedora/locale.sh",
+      "scripts/fedora/selinux.sh",
+      "scripts/fedora/cleanup.sh"
     ]
   }],
   "post-processors": [{
