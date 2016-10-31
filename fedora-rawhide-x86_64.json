@@ -136,6 +136,6 @@
     "iso_checksum_type": "sha256",
     "memory": "512",
     "mirror": "http://download.fedoraproject.org/pub/fedora/linux",
-    "ssh_timeout": "60m"
+    "ssh_timeout": "120m"
   }
 }
