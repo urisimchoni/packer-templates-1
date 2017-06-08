@@ -9,7 +9,9 @@ set -x
 
 sudo dnf install -y "@lxde-desktop" tigervnc-server vim cscope 
 sudo cp /lib/systemd/system/vncserver@.service /etc/systemd/system/vncserver@.service
-sudo sed -i -e 's/^User=/User=vagrant/' -e 's/<USER>/vagrant/' /etc/systemd/system/vncserver@.service
+sudo sed -i -e 's/^User=/User=vagrant/' /etc/systemd/system/vncserver@.service
+sudo sed -i -e 's/<USER>/vagrant/' /etc/systemd/system/vncserver@.service
+sudo sed -i -e 's/\([[:space:]]\)%i$/\1:%i/' /etc/systemd/system/vncserver@.service
 sudo systemctl daemon-reload
 bash -c 'echo -e "vagrant\nvagrant\n\n" | vncpasswd'
 sudo systemctl start firewalld.service
